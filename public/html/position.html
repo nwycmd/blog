@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人主页</title>
+    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <header></header>
+    <div style="width:100%;height: 350px;margin-top: -20px;"><img style="width:100%;height: 350px;" src="../img/timg (1).jpeg"></div>
+    <div class="container col-md-9"  style="padding:30px;">
+            <h2 style="background-image: url(../img/h_line.jpg);
+            background-repeat: repeat-x;
+            background-position: 28px center;"> 
+                <p style="width:140px; background:white;">文章 <span style="color: #ff8986;">推荐</span></p> 
+            </h2>
+    <h3 class="modal-title glyphicon glyphicon-forward" style="float: left;color:red"><span>热门Blog</span></h3>
+            <button type="button" class="btn btn-primary " style="float: right;" data-toggle="modal" data-target="#positionModal">添加</button>
+            <hr style="margin-top:60px;">
+            <!-- 模板 -->
+            <div class="moban"> 
+            </div>
+            <!-- 分页 -->
+            <nav aria-label="Page navigation" style="float:right;">
+                <ul class="pagination">
+                  
+                </ul>
+              </nav>
+    </div>
+    <!-- 右边 -->
+  <div class="container col-md-3">
+      <h3><p style="width:140px; background:white;">今日<span style="color:#37ccca;">推荐</span></p> <h3><hr>
+        <aside >
+            <div class="newestArticle">
+                <h4 class="title_nt">
+                    <p style="background: white;width: 145px">最新<span style="color: #37ccca;">文章</span></p>
+                </h4>
+                <ul class="item_nt" style="margin-left:-22px;">
+                  
+                </ul>
+            </div>
+            <hr>
+            <div class="clickRand" style="margin-top:40px;">
+                <h4 class="title_nt">
+                    <p style="background: white;width: 145px">点击<span style="color: red;">排行</span></p>
+                </h4>
+                <ul class="item_nt1" style="padding: 0 5px;list-style: none;">
+                    
+                </ul>
+            </div>
+            <hr>
+            <div class="linkMe" style="margin-top:40px;">
+                <h4 class="title_nt">
+                    <p style="background: white;width: 145px">推荐<span style="color: red;">新闻</span></p>
+                </h4>
+                <a href="">
+                  <h5>
+                  <P>华为外包程序员跳楼，难道这是我的35岁？</P>
+                  <P>阿里P7员工得白血病身故，生前租了自如甲醛房</P>
+                  <P>它是人类战胜遗传病的曙光，却难摆脱愚昧保守的误解</P>
+                  <P>1.5万字深度长文：揭秘中国制造真相....</P>
+                </a>
+            </div>
+            <hr>
+            <div class="imgs" style="margin-top:40px;">
+                <h4 class="title_nt">
+                    <p style="background: white;width: 145px">美图<span style="color: red;">欣赏</span></p>
+                </h4>
+              <a href=""><img src="../img/upload/logo-1535695467030.jpg" alt="" style="width:240px;height:240px;"></a>
+              <a href=""><img src="../img/upload/logo-1535698981055.jpg" alt="" style="width:240px;height:240px;margin-top:10px; "></a>
+            </div>
+    </aside>
+</div>
+
+    <!-- 添加模态框 -->
+    <div class="modal fade" id="positionModal" >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="addpositionLabel">写博客</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="add_position_form">
+                    <div class="form-group">
+                          <label for="companyName">作者</label>
+                          <input type="text" class="form-control" id="author" name="author" placeholder="主题">
+                      </div>
+                    <div class="form-group">
+                      <label for="companyName">Blog主题</label>
+                      <input type="text" class="form-control" id="companyName" name="name" placeholder="主题">
+                    </div>
+                    <div class="form-group">
+                      <label for="logo">Blog图片</label>
+                      <input type="file" class="form-control" id="logo"  name="logo">
+                    </div>
+                    <div class="form-group">
+                      <label for="positionAddress">Blog内容</label>
+                      <input type="text" class="form-control" id="positionAddress" name="cont" placeholder="内容">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary add_position btn-add-pos">提交</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- 修改模态框 -->
+<div class="modal fade" id="updateModal" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="addpositionLabel">修改博客</h4>
+        </div>
+        <div class="modal-body">
+          <form class="add_position_form">
+            <div class="form-group">
+              <label for="companyName">Blog主题</label>
+              <input type="text" class="form-control" id="blogName" name="name" placeholder="主题">
+            </div>
+            <div class="form-group">
+              <label for="logo">Blog图片</label>
+              <input type="file" class="form-control" id="updatelogo"  name="logo">
+            </div>
+            <div class="form-group">
+              <label for="positionAddress">Blog内容</label>
+              <input type="text" class="form-control" id="updateAddress" name="cont" placeholder="内容">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary add_position btn-update-pos">修改</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+<script src="/lib/ejs/ejs.js"></script>
+<script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/common/header.js"></script>
+<script src="/js/common/position.js"></script>
+</body>
+</html>
